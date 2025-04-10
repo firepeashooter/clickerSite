@@ -12,14 +12,19 @@ class Building{
 
 }
 
+//Building Names and Id of the element that displays it's information
+const brettFactory = new Building('Brett Factory', 0, 1);
+const factoryID = "brettFactoryLevel";
 
 
 let intervalID;
 
-function buyBrettFactory(){
+
+
+function buyBuilding(building, id){
 
     brettFactory.level += 1;
-    document.getElementById('brettFactoryLevel').innerHTML = brettFactory.level;
+    document.getElementById(id).innerHTML = building.level;
     
 
     //Reset the interval so it updates the count and so that there is only 1 interval happening at a time
@@ -27,22 +32,22 @@ function buyBrettFactory(){
         clearInterval(intervalID)
     }
 
-    //Every second we call the produce cookies function on brettFactory
+    //Every second we call the produce cookies function on building
     intervalID = setInterval(() => {
-        brettFactory.produceCookies(); // Arrow function ensures 'this' refers to brettFactory
+        building.produceCookies(); // Arrow function magic 
     }, 1000);
 }
 
 
-function sellBrettFactory(){
+function sellBuilding(building, id){
 
-
-    if (brettFactory.level <= 0){
-        console.log('Brett Factory already all sold')
+    //If building is level 0 or lower don't update the level again and end the interval (timer)
+    if (building.level <= 0){
+        console.log(building.name +  ' already all sold')
         clearInterval(intervalID)
     }else{
-        brettFactory.level -= 1
-        document.getElementById('brettFactoryLevel').innerHTML = brettFactory.level;
+        building.level -= 1
+        document.getElementById(id).innerHTML = building.level;
         
     }  
 }
@@ -50,4 +55,4 @@ function sellBrettFactory(){
 
 
 
-const brettFactory = new Building('Brett Factory', 0, 1);
+
