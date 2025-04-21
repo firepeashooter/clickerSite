@@ -32,6 +32,7 @@
 
 .building--button--container{
     display: flex;
+    padding-right: 30px;
 }
 
 
