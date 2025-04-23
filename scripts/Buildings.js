@@ -48,7 +48,7 @@ function buyBuilding(building, id, costID){
         //Updates the global cps counter
         globalCPS += building.cps 
 
-        //Reset the interval so it updates the count and so that there is only 1 interval happening at a time
+        //Reset the interval so it updates the count and so that there is only 1 interval happening at a time (Not sure if we need this?)
         if (intervalID){
             clearInterval(intervalID)
         }
