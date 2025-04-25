@@ -9,12 +9,27 @@ function cookieUp(clickMultiplier){
 
     //Interactive Cookie!
     cookie_image.style.transform = "scale(1.1)";
-    setTimeout(() => {cookie_image.style.transform = 'scale(1)';}, 1)
+    setTimeout(cookieNormal, 10)
     
     //Increases the cookie counter from clicking
     cookies += (1 * clickMultiplier);
     document.getElementById('counter').innerHTML = cookies;
     
+}
+
+
+//Function for scaling up the cookie
+function cookieBig(){
+    cookie_image = document.getElementById('cookie');
+
+    cookie_image.style.transform = "scale(1.1)";
+}
+
+//Function for making the cookie the original size again
+function cookieNormal(){
+    cookie_image = document.getElementById('cookie');
+
+    cookie_image.style.transform = "scale(1)";
 }
 
 
