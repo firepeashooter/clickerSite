@@ -23,6 +23,7 @@ function cookieBig(){
     cookie_image = document.getElementById('cookie');
 
     cookie_image.style.transform = "scale(1.1)";
+    setTimeout(cookieNormal, 100)
 }
 
 //Function for making the cookie the original size again
