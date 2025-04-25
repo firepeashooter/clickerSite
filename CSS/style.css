@@ -30,8 +30,30 @@
 
 .building--information--container{
     display: flex;
-    justify-content: space-around;
+    
     gap:30px
+}
+
+.building--level--container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:8px;
+}
+
+.building--level--container h3 {
+    margin: 0;
+}
+
+.building--cost--container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+}
+
+.building--cost--container h3 {
+    margin: 0;
 }
 
 
@@ -52,7 +74,7 @@
     "header header header"
     "left center right"
     "footer footer footer";
-    grid-template-columns: 1.5fr 2fr 1.5fr;
+    grid-template-columns: 1fr 2fr 1.5fr;
     grid-template-rows: 1fr 5fr 1fr;
     
     

@@ -18,23 +18,23 @@ const brettFactory = new Building('Brett Factory', 0, 1, 10);
 const factoryID = "brettFactoryLevel";
 const factoryCostID = "brettFactoryCost";
 
-const brettFarm = new Building('Brett Farm', 0, 5, 100);
+const brettFarm = new Building('Brett Farm', 0, 5, 500);
 const farmID = "brettFarmLevel";
 const farmCostID = "brettFarmCost";
 
-const gamblingHouse = new Building('Brett Gambling House', 0, 5, 100);
+const gamblingHouse = new Building('Brett Gambling House', 0, 100, 6200);
 const gamblingID = "brettGamblingLevel";
 const gamblingCostID = "brettGamblingCost";
 
-const brettLab = new Building('Brett Labs', 0, 5, 100);
+const brettLab = new Building('Brett Labs', 0, 520, 50000);
 const labID = "brettLabLevel";
 const labCostID = "brettLabCost";
 
-const brettRecursion = new Building('Brett Recursion', 0, 5, 100);
+const brettRecursion = new Building('Brett Recursion', 0, 5300, 320320);
 const recursionID = "brettRecursionLevel";
 const recursionCostID = "brettRecursionCost";
 
-const brettSingularity = new Building('Brett Singularity', 0, 5, 100);
+const brettSingularity = new Building('Brett Singularity', 0, 60000, 1000000);
 const singularityID = "brettSingularityLevel";
 const singularityCostID = "brettSingularityCost";
 
