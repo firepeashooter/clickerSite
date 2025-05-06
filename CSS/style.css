@@ -67,6 +67,11 @@
     display: flex;
 }
 
+.upgrade{
+    display: flex;
+    justify-content: center;
+}
+
 
 
 .container{

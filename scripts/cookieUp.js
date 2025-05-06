@@ -46,7 +46,7 @@ function upgradeClick(){
     if (clickUpgrade){
         clickMultiplier *= 2;
         //In this case we just switch the image to signify that it's been created
-        document.getElementById("upgrade1").src = "images/cancel.jpg";
+        document.getElementById("upgrade1").src = "images/checkbox.avif";
         clickUpgrade = false;
     }
     
