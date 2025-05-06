@@ -34,7 +34,7 @@ const brettRecursion = new Building('Brett Recursion', 0, 5300, 320320);
 const recursionID = "brettRecursionLevel";
 const recursionCostID = "brettRecursionCost";
 
-const brettSingularity = new Building('Brett Singularity', 0, 60000, 1000000);
+const brettSingularity = new Building('Brett Singularity', 0, 50000000, 0);
 const singularityID = "brettSingularityLevel";
 const singularityCostID = "brettSingularityCost";
 
