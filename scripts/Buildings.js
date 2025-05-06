@@ -44,7 +44,7 @@ let intervalID;
 
 function produceCookies(){
     cookies += globalCPS;
-    document.getElementById('counter').innerHTML = cookies;
+    document.getElementById('counter').innerHTML =  numberFormatter(cookies);
     console.log(globalCPS)
 }
 
