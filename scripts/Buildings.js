@@ -34,7 +34,7 @@ const brettRecursion = new Building('Brett Recursion', 0, 5300, 320320);
 const recursionID = "brettRecursionLevel";
 const recursionCostID = "brettRecursionCost";
 
-const brettSingularity = new Building('Brett Singularity', 0, 60000, 1000000);
+const brettSingularity = new Building('Brett Singularity', 0, 620000, 1000000);
 const singularityID = "brettSingularityLevel";
 const singularityCostID = "brettSingularityCost";
 
@@ -44,7 +44,7 @@ let intervalID;
 
 function produceCookies(){
     cookies += globalCPS;
-    document.getElementById('counter').innerHTML = cookies;
+    document.getElementById('counter').innerHTML =  numberFormatter(cookies);
     console.log(globalCPS)
 }
 
@@ -60,7 +60,7 @@ function buyBuilding(building, id, costID){
         cookies -= building.cost;
         building.cost *= 2;   //Doubles the cost of the building each time
         document.getElementById(id).innerHTML = building.level;
-        document.getElementById(costID).innerHTML = building.cost;
+        document.getElementById(costID).innerHTML = numberFormatter(building.cost);
 
         //Updates the global cps counter
         globalCPS += building.cps 
@@ -94,7 +94,7 @@ function sellBuilding(building, id, costID){
         building.cost /= 2;
         cookies += building.cost * 0.5; //Should give us back 50% of the building cost
         document.getElementById(id).innerHTML = building.level;
-        document.getElementById(costID).innerHTML = building.cost;
+        document.getElementById(costID).innerHTML = numberFormatter(building.cost);
 
         //Updates the global cps counter 
         globalCPS -= building.cps

@@ -13,7 +13,7 @@ function cookieUp(clickMultiplier){
     
     //Increases the cookie counter from clicking
     cookies += (1 * clickMultiplier);
-    document.getElementById('counter').innerHTML = cookies;
+    document.getElementById('counter').innerHTML = numberFormatter(cookies);
     
 }
 
