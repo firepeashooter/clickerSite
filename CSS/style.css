@@ -69,7 +69,21 @@
 
 .upgrade{
     display: flex;
-    justify-content: center;
+}
+
+.upgrade--tooltip{
+    display: none;
+    background: #C8C8C8;
+    margin-left: 28px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1000;
+    width:200px;
+    height:100px;
+}
+
+.upgrade:hover .upgrade--tooltip{
+    display: block;
 }
 
 
@@ -81,10 +95,7 @@
     "left center right"
     "footer footer footer";
     grid-template-columns: 1fr 2fr 1.5fr;
-    grid-template-rows: 1fr 5fr 1fr;
-    
-    
-   
+    grid-template-rows: 1fr 5fr 1fr; 
 }
 
 
