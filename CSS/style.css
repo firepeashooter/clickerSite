@@ -46,6 +46,7 @@
     margin: 0;
 }
 
+
 .building--cost--container{
     display: flex;
     flex-direction: column;
@@ -79,11 +80,16 @@
     position: absolute;
     z-index: 1000;
     width:200px;
-    height:100px;
+    height:200px;
+}
+
+.upgrade--tooltip h3 {
+    margin-top: 0px;
 }
 
 .upgrade:hover .upgrade--tooltip{
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 
