@@ -2,6 +2,7 @@
 let cookies = 0;
 let clickMultiplier = 1;
 let clickUpgrade = true
+let brettFactoryUpgrade = true;
 
 function cookieUp(clickMultiplier){
 
@@ -50,4 +51,17 @@ function upgradeClick(){
         clickUpgrade = false;
     }
     
+}
+
+
+function upgradeBrettFactory(){
+
+    console.log('brettFacotry cps doubled')
+
+    if (brettFactoryUpgrade){
+        brettFactory.cps *= 2
+
+        document.getElementById("upgrade2").src = "images/checkbox.avif";
+        brettFactoryUpgrade = false;
+    }
 }
