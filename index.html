@@ -6,9 +6,10 @@
   </head>
   <body>
 
-    <script src="scripts/cookieUp.js"></script>
     <script src="scripts/Buildings.js"></script>
+    <script src="scripts/cookieUp.js"></script>
     <script src="scripts/numberFormater.js"></script>
+    <script src="scripts/upgradeTooltip.js"></script>
 
     <div class="container">
 
@@ -68,9 +69,141 @@
       <div class="top--right">
         <h3 style="text-align: center;">Upgrades</h3>
 
-        <div class="upgrade--container">
-          <img id="upgrade1" src="images/cookie.jpg" class="upgrade--image" style="border: 4px solid black;" onclick="upgradeClick()"></img>
+        <div class ="upgrade--container">
+
+
+
+
+          <div class="upgrade">
+            <img src="images/cookie.jpg" id="upgrade1" class="upgrade--image" style="border: 4px solid black;" onclick="upgradeClick()"></img>
+            <span class="upgrade--tooltip">
+              <div>
+
+                <h3>Upgrade Click</h3>
+                <h3>Cost: 100</h3>
+              </div>
+
+              <div>
+
+                <p style="margin:0px;" >Doubles the value of your Clicking Power</p>
+              </div>
+            </span>
+          </div>
+
+
+          <div class="upgrade">
+            <img src="images/cookie.jpg" id="upgrade2" class="upgrade--image" style="border: 4px solid black;" onclick="upgradeBuilding(brettFactory, brettFactoryUpgrade, 'upgrade2')"></img>
+            <span class="upgrade--tooltip">
+              <div>
+
+                <h3>Upgrade BrettFactory</h3>
+                <h3>Cost: 500</h3>
+              </div>
+
+              <div>
+
+                <p style="margin:0px;" >The Bretts work harder seeing all the cookies they have created! Doubles the productivity of each Brett Factory</p>
+              </div>
+            </span>
+          </div>
+
+
+          <div class="upgrade">
+            <img src="images/cookie.jpg" id="upgrade3" class="upgrade--image" style="border: 4px solid black;" onclick="upgradeBuilding(brettFarm, brettFarmUpgrade, 'upgrade3')"></img>
+            <span class="upgrade--tooltip">
+              <div>
+
+                <h3>Upgrade BrettFarm</h3>
+                <h3>Cost: TBD</h3>
+              </div>
+
+              <div>
+
+                <p style="margin:0px;" >The Bretts have discovered a new crop! Doubles the productivity of each Brett Farm</p>
+              </div>
+            </span>
+          </div>
+
+
+          <div class="upgrade">
+            <img src="images/cookie.jpg" id="upgrade4" class="upgrade--image" style="border: 4px solid black;" onclick="upgradeBuilding(gamblingHouse, gamblingHouseUpgrade, 'upgrade4')"></img>
+            <span class="upgrade--tooltip">
+              <div>
+
+                <h3>Upgrade Gambling House</h3>
+                <h3>Cost: TBD</h3>
+              </div>
+
+              <div>
+
+                <p style="margin:0px;" >A breakthrough in card counting! Doubles the productivity of each Gambling House</p>
+              </div>
+            </span>
+          </div>
+
+
+          <div class="upgrade">
+            <img src="images/cookie.jpg" id="upgrade5" class="upgrade--image" style="border: 4px solid black;" onclick="upgradeBuilding(brettLab, brettLabUpgrade, 'upgrade5')"></img>
+            <span class="upgrade--tooltip">
+              <div>
+
+                <h3>Upgrade BrettLab</h3>
+                <h3>Cost: TBD</h3>
+              </div>
+
+              <div>
+
+                <p style="margin:0px;" >The Bretts have discovered Brett Synthesis! Doubles the productivity of each Brett Lab</p>
+              </div>
+            </span>
+          </div>
+
+
+          <div class="upgrade">
+            <img src="images/cookie.jpg" id="upgrade6" class="upgrade--image" style="border: 4px solid black;" onclick="upgradeBuilding(brettRecursion, brettRecursionUpgrade, 'upgrade6')"></img>
+            <span class="upgrade--tooltip">
+              <div>
+
+                <h3>Upgrade Brett Recursion</h3>
+                <h3>Cost: TBD</h3>
+              </div>
+
+              <div>
+
+                <p style="margin:0px;" >The Bretts figured out a way to recurse ON THE RECURSION! Doubles the productivity of each Brett Recursion</p>
+              </div>
+            </span>
+          </div>
+
+
+          <div class="upgrade">
+            <img src="images/cookie.jpg" id="upgrade7" class="upgrade--image" style="border: 4px solid black;" onclick="upgradeBuilding(brettSingularity, brettSingularityUpgrade, 'upgrade7')"></img>
+            <span class="upgrade--tooltip">
+              <div>
+
+                <h3>Upgrade BrettSingularity</h3>
+                <h3>Cost: TBD</h3>
+              </div>
+
+              <div>
+
+                <p style="margin:0px;" >Another Brett singularity has been discovered! Doubles the productivity of each Brett Singularity</p>
+              </div>
+            </span>
+          </div>
+
+
+
+
+
+
+
+
+          
+
         </div>
+
+        
 
         <h3 style="text-align: center;">Buildings</h3>
         
@@ -268,5 +401,7 @@
     
 
   </div>
+
+  <script src="scripts/upgradeTooltip.js"></script>
   </body>
 </html>
