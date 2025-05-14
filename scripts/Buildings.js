@@ -11,6 +11,8 @@ class Building{
 //Global cps
 let globalCPS = 0;
 
+//Global cookies ever made
+let allTimeCookies = 0
 //TODO: EDIT ALL OF THE BUILDING VALUES
 
 //Building Names and Id of the element that displays it's information
@@ -44,6 +46,7 @@ let intervalID;
 
 function produceCookies(){
     cookies += globalCPS;
+    allTimeCookies += globalCPS;
     document.getElementById('counter').innerHTML =  numberFormatter(cookies);
     console.log(globalCPS)
 }
