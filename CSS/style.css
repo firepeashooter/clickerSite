@@ -107,7 +107,6 @@
 .stat--container{
     display:flex; 
     flex-direction: row; 
-    border: 5px solid black
 }
 
 .progress--bar--container{
