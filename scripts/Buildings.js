@@ -8,8 +8,28 @@ class Building{
 
 }
 
+class Upgrade{
+    constructor(name, cost){
+        this.name = name
+        this.cost = cost
+        this.bought = false
+    }
+
+}
+
+//Upgrades
+let brettFactoryUpgrade = new Upgrade('brettFactoryUpgrade', 5);
+let brettFarmUpgrade = new Upgrade('brettFarmUpgrade', 5);
+let gamblingHouseUpgrade = new Upgrade('gamblingHouseUpgrade', 5);
+let brettLabUpgrade = new Upgrade('brettLabUpgrade', 5);
+let brettRecursionUpgrade = new Upgrade('brettRecursionUpgrade', 5);
+let brettSingularityUpgrade = new Upgrade('brettSingularityUpgrade', 5);
+
+
+
 //Global cps
 let globalCPS = 0;
+
 
 //TODO: EDIT ALL OF THE BUILDING VALUES
 
@@ -45,7 +65,34 @@ let intervalID;
 function produceCookies(){
     cookies += globalCPS;
     document.getElementById('counter').innerHTML =  numberFormatter(cookies);
-    console.log(globalCPS)
+    console.log(globalCPS);
+}
+
+
+function upgradeBuilding(building, upgrade, upgradeId){
+
+    console.log(upgrade.bought)
+
+    //Flag to check if the upgrade has already been bought
+    if((upgrade.bought)){
+        console.log('Already made this purchase')
+    
+    //If we have the cookies purchase the upgrade
+    }else if (cookies >= upgrade.cost){
+        building.cps *= 2;
+        cookies -= upgrade.cost;
+        document.getElementById('counter').innerHTML = cookies;
+        console.log(building.name + 'upgraded');
+        //Set the flag to false
+        upgrade.bought = true
+        //Change the image to the checkmark
+        document.getElementById(upgradeId).src = "images/checkbox.avif";
+
+    }else{
+        console.log("You do not have enough cookies to make this purchase");
+    }
+
+
 }
 
 

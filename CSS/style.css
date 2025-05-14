@@ -46,6 +46,7 @@
     margin: 0;
 }
 
+
 .building--cost--container{
     display: flex;
     flex-direction: column;
@@ -67,6 +68,30 @@
     display: flex;
 }
 
+.upgrade{
+    display: flex;
+}
+
+.upgrade--tooltip{
+    display: none;
+    background: #C8C8C8;
+    margin-left: 28px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1000;
+    width:200px;
+    height:200px;
+}
+
+.upgrade--tooltip h3 {
+    margin-top: 0px;
+}
+
+.upgrade:hover .upgrade--tooltip{
+    display: flex;
+    flex-direction: column;
+}
+
 
 
 .container{
@@ -76,10 +101,7 @@
     "left center right"
     "footer footer footer";
     grid-template-columns: 1fr 2fr 1.5fr;
-    grid-template-rows: 1fr 5fr 1fr;
-    
-    
-   
+    grid-template-rows: 1fr 5fr 1fr; 
 }
 
 

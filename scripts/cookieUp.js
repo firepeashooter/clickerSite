@@ -3,6 +3,7 @@ let cookies = 0;
 let clickMultiplier = 1;
 let clickUpgrade = true
 
+
 function cookieUp(clickMultiplier){
 
     cookie_image = document.getElementById('cookie');
@@ -17,7 +18,6 @@ function cookieUp(clickMultiplier){
     
 }
 
-
 //Function for scaling up the cookie
 function cookieBig(){
     cookie_image = document.getElementById('cookie');
@@ -29,7 +29,6 @@ function cookieBig(){
 //Function for making the cookie the original size again
 function cookieNormal(){
     cookie_image = document.getElementById('cookie');
-
     cookie_image.style.transform = "scale(1)";
 }
 
@@ -41,13 +40,19 @@ function cookieNormal(){
 function upgradeClick(){
     //Multiply the click power by 2 and then replace the current picture with a new one\
 
-    console.log('upgraded click');
+    if(!(clickUpgrade)){
+        console.log('Already made this purchase')
 
-    if (clickUpgrade){
+    }else if (cookies >= 100){
         clickMultiplier *= 2;
-        //In this case we just switch the image to signify that it's been created
-        document.getElementById("upgrade1").src = "images/cancel.jpg";
+        cookies -= 100;
         clickUpgrade = false;
+        document.getElementById('upgrade1').src = "images/checkbox.avif";
+
+    }else{
+        console.log("You do not have enough cookies to make this purchase");
     }
     
 }
+
+
