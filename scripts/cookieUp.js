@@ -1,7 +1,8 @@
 
 let cookies = 0;
 let clickMultiplier = 1;
-let clickUpgrade = true
+let clickUpgrade = true;
+let clicks = 0
 
 function cookieUp(clickMultiplier){
 
@@ -13,7 +14,10 @@ function cookieUp(clickMultiplier){
     
     //Increases the cookie counter from clicking
     cookies += (1 * clickMultiplier);
+    //Keeping tracks of clicks for the stats page
+    clicks += 1;
     document.getElementById('counter').innerHTML = numberFormatter(cookies);
+    document.getElementById('clicks').innerHTML = numberFormatter(clicks);
     
 }
 
