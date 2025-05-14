@@ -30,6 +30,8 @@ let brettSingularityUpgrade = new Upgrade('brettSingularityUpgrade', 5);
 //Global cps
 let globalCPS = 0;
 
+
+
 //Global buildingsBought
 let buildingsBought = 0;
 
