@@ -64,7 +64,7 @@ function buyBuilding(building, id, costID){
 
     if (cookies >= building.cost){ //Buy the Building Successfully
         
-        //Update the level and cost and cast it to the website
+        //Update the level and cost, and buildingsBought and cast it to the website
         building.level += 1;
         cookies -= building.cost;
         buildingsBought += 1;
