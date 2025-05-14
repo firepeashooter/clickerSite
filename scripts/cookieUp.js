@@ -17,8 +17,10 @@ function cookieUp(clickMultiplier){
     cookies += (1 * clickMultiplier);
     //Keeping tracks of clicks for the stats page
     clicks += 1;
+    allTimeCookies += 1;
     document.getElementById('counter').innerHTML = numberFormatter(cookies);
     document.getElementById('clicks').innerHTML = numberFormatter(clicks);
+    document.getElementById('allTimeCookies').innerHTML = numberFormatter(allTimeCookies);
     
 }
 

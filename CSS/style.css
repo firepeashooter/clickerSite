@@ -110,6 +110,22 @@
     border: 5px solid black
 }
 
+.progress--bar--container{
+    margin:10%;
+}
+
+
+.progress--bar--outline{
+    display: flex;
+    border: 8px solid black
+}
+
+.progress--bar{
+    width: 30%;
+    height: 50px;
+    background-color: green;
+}
+
 
 
 
