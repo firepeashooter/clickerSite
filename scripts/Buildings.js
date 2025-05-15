@@ -31,6 +31,13 @@ let brettSingularityUpgrade = new Upgrade('brettSingularityUpgrade', 5);
 let globalCPS = 0;
 
 
+
+//Global buildingsBought
+let buildingsBought = 0;
+
+//Global cookies ever made
+let allTimeCookies = 0
+
 //TODO: EDIT ALL OF THE BUILDING VALUES
 
 //Building Names and Id of the element that displays it's information
@@ -64,8 +71,12 @@ let intervalID;
 
 function produceCookies(){
     cookies += globalCPS;
+
+    //consitently generates cookies based on globalCPS to keep track of total cookies ever
+    allTimeCookies += globalCPS;
     document.getElementById('counter').innerHTML =  numberFormatter(cookies);
-    console.log(globalCPS);
+    document.getElementById('brettsPerSecond').innerHTML = numberFormatter(globalCPS)
+    document.getElementById('allTimeCookies').innerHTML = numberFormatter(allTimeCookies)
 }
 
 
@@ -93,6 +104,7 @@ function upgradeBuilding(building, upgrade, upgradeId){
     }
 
 
+
 }
 
 
@@ -102,12 +114,14 @@ function buyBuilding(building, id, costID){
 
     if (cookies >= building.cost){ //Buy the Building Successfully
         
-        //Update the level and cost and cast it to the website
+        //Update the level and cost, and buildingsBought and cast it to the website
         building.level += 1;
         cookies -= building.cost;
+        buildingsBought += 1;
         building.cost *= 2;   //Doubles the cost of the building each time
         document.getElementById(id).innerHTML = building.level;
         document.getElementById(costID).innerHTML = numberFormatter(building.cost);
+        document.getElementById('buildingsBought').innerHTML = numberFormatter(buildingsBought);
 
         //Updates the global cps counter
         globalCPS += building.cps 

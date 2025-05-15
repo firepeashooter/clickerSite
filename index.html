@@ -10,12 +10,15 @@
     <script src="scripts/cookieUp.js"></script>
     <script src="scripts/numberFormater.js"></script>
     <script src="scripts/upgradeTooltip.js"></script>
+    
 
     <div class="container">
 
 
-    <div class="header">
-     <h2>The Header</h2>
+    <div class="header" style="text-align: center;">
+      
+        <h2>The Brett Clicker</h2>
+     
     </div>
     
     <div class="left">
@@ -33,7 +36,49 @@
     </div>
 
     <div class="center">
-        <h4>Center</h4>
+
+
+
+      <div class = "Stats">
+        <div style="text-align: center;">
+          <h2>Statistics</h2>
+        </div>
+        
+
+        <div class="stat--container">
+          <h3>Total Bretts Created: </h3> 
+          <h3 id="allTimeCookies" style="padding-left: 5%;">0</h3>
+        </div>
+
+        <div class="stat--container">
+          <h3>Total Bretts Per Second: </h3> 
+          <h3 id="brettsPerSecond" style="padding-left: 5%;">0</h3>
+        </div>
+
+        <div class="stat--container">
+          <h3>Total Clicks: </h3> 
+          <h3 id="clicks" style="padding-left: 5%;">0</h3>
+        </div>
+
+        <div class="stat--container">
+          <h3>BuildingsBought: </h3> 
+          <h3 id="buildingsBought" style="padding-left: 5%;">0</h3>
+        </div>
+
+      </div>
+      
+      <div class="progress--bar--container">
+        <h3>Progress Until Complete</h3>
+      <div class="progress--bar--outline">
+
+        <div class="progress--bar" id="progress">
+
+        </div>
+
+
+      </div>
+
+      </div>
     </div>
 
     <div class="right">
@@ -375,5 +420,7 @@
   </div>
 
   <script src="scripts/upgradeTooltip.js"></script>
+  <script src="scripts/progressBar.js"></script>
+
   </body>
 </html>
