@@ -58,6 +58,22 @@
     margin: 0;
 }
 
+.building--tooltip{
+    display: none;
+    background: #C8C8C8;
+    margin-left: 28px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1000;
+    width:200px;
+    height:200px;
+}
+
+.building:hover .building--tooltip{
+    display: flex;
+    flex-direction: column;
+}
+
 
 .building--button--container{
     display: flex;
