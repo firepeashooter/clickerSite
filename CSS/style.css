@@ -66,10 +66,10 @@
     position: absolute;
     z-index: 1000;
     width:200px;
-    height:200px;
+    height:250;
 }
 
-.building:hover .building--tooltip{
+.building--name:hover .building--tooltip{
     display: flex;
     flex-direction: column;
 }

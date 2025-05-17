@@ -44,26 +44,32 @@ let allTimeCookies = 0
 const brettFactory = new Building('Brett Factory', 0, 1, 10);
 const factoryID = "brettFactoryLevel";
 const factoryCostID = "brettFactoryCost";
+const factoryCPSID = 'brettFactoryCPS';
 
 const brettFarm = new Building('Brett Farm', 0, 5, 500);
 const farmID = "brettFarmLevel";
 const farmCostID = "brettFarmCost";
+const farmCPSID = "brettFarmCPS";
 
 const gamblingHouse = new Building('Brett Gambling House', 0, 100, 6200);
 const gamblingID = "brettGamblingLevel";
 const gamblingCostID = "brettGamblingCost";
+const gamblingCPSID = "brettGamblingCPS";
 
 const brettLab = new Building('Brett Labs', 0, 520, 50000);
 const labID = "brettLabLevel";
 const labCostID = "brettLabCost";
+const labCPSID = "brettLabCPS";
 
 const brettRecursion = new Building('Brett Recursion', 0, 5300, 320320);
 const recursionID = "brettRecursionLevel";
 const recursionCostID = "brettRecursionCost";
+const recursionCPSID = "brettRecursionCPS";
 
 const brettSingularity = new Building('Brett Singularity', 0, 620000, 1000000);
 const singularityID = "brettSingularityLevel";
 const singularityCostID = "brettSingularityCost";
+const singularityCPSID = "brettSingularityCPS";
 
 
 let intervalID;
@@ -80,7 +86,7 @@ function produceCookies(){
 }
 
 
-function upgradeBuilding(building, upgrade, upgradeId){
+function upgradeBuilding(building, upgrade, upgradeId, cpsID){
 
     console.log(upgrade.bought)
 
@@ -92,7 +98,9 @@ function upgradeBuilding(building, upgrade, upgradeId){
     }else if (cookies >= upgrade.cost){
         building.cps *= 2;
         cookies -= upgrade.cost;
-        document.getElementById('counter').innerHTML = cookies;
+
+        document.getElementById(cpsID).innerHTML = numberFormatter(building.cps);
+        document.getElementById('counter').innerHTML = numberFormatter(cookies);
         console.log(building.name + 'upgraded');
         //Set the flag to false
         upgrade.bought = true
