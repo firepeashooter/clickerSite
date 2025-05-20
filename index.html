@@ -198,7 +198,7 @@
             <span class="upgrade--tooltip">
               <div>
 
-                <h3>Upgrade BrettSingularity</h3>
+                <h3>Upgrade Brett Singularity</h3>
                 <h3>Cost: TBD</h3>
               </div>
 
@@ -263,12 +263,16 @@
           </div>
           
           <div class="building--button--container">
-            <button onclick="buyBuilding(brettFactory, factoryID, factoryCostID)">Buy</button>
-            <button onclick="sellBuilding(brettFactory, factoryID, factoryCostID)">Sell</button>
+            <button onclick="buyBuilding(brettFactory, factoryID, factoryCostID, factoryErrorID)">Buy</button>
+            <button onclick="sellBuilding(brettFactory, factoryID, factoryCostID, factoryErrorID)">Sell</button>
 
           </div>
-           
+          
         </div>
+
+        <div class="builidng--error--message">
+            <span id="factoryErrorMessage" style="display: none;"></span>
+        </div> 
 
 
         <div class="building" id="building2">

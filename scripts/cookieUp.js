@@ -8,10 +8,11 @@ let clicks = 0
 function cookieUp(clickMultiplier){
 
     cookie_image = document.getElementById('cookie');
-
+    
     //Interactive Cookie!
     cookie_image.style.transform = "scale(1.1)";
     setTimeout(cookieNormal, 10)
+
     
     //Increases the cookie counter from clicking
     cookies += (1 * clickMultiplier);

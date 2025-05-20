@@ -45,6 +45,7 @@ const brettFactory = new Building('Brett Factory', 0, 1, 10);
 const factoryID = "brettFactoryLevel";
 const factoryCostID = "brettFactoryCost";
 const factoryCPSID = 'brettFactoryCPS';
+const factoryErrorID = 'factoryErrorMessage';
 
 const brettFarm = new Building('Brett Farm', 0, 5, 500);
 const farmID = "brettFarmLevel";
@@ -117,7 +118,7 @@ function upgradeBuilding(building, upgrade, upgradeId, cpsID){
 
 
 
-function buyBuilding(building, id, costID){
+function buyBuilding(building, id, costID, errorID){
 
 
     if (cookies >= building.cost){ //Buy the Building Successfully
@@ -144,16 +145,25 @@ function buyBuilding(building, id, costID){
 
     } else{ //Not enough cookies
         console.log("You do not have enough cookies to make this purchase")
+
+        document.getElementById(errorID).innerHTML = "Not enought cookies to make this purchase";  
+        document.getElementById(errorID).style.display = "flex";      
+        setTimeout(handleErrors, 3000, errorID);
     }
     
 }
 
 
-function sellBuilding(building, id, costID){
+function sellBuilding(building, id, costID, errorID){
 
     //If building is level 0 or lower don't update the level again and end the interval (timer)
     if (building.level <= 0){
         console.log(building.name +  ' already all sold')
+
+        //Handles error message if building is already sold
+        document.getElementById(errorID).innerHTML = "Building Already Sold";  
+        document.getElementById(errorID).style.display = "flex";      
+        setTimeout(handleErrors, 3000, errorID);
         
 
     }else{ //Sucessfully sell the building
@@ -170,6 +180,13 @@ function sellBuilding(building, id, costID){
         
         
     }  
+}
+
+//Makes the error messages disappear 
+function handleErrors(elementID){
+    document.getElementById(elementID).style.display = "none";
+    
+
 }
 
 
