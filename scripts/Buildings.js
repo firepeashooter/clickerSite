@@ -44,26 +44,38 @@ let allTimeCookies = 0
 const brettFactory = new Building('Brett Factory', 0, 1, 10);
 const factoryID = "brettFactoryLevel";
 const factoryCostID = "brettFactoryCost";
+const factoryCPSID = 'brettFactoryCPS';
+const factoryErrorID = 'factoryErrorMessage';
 
 const brettFarm = new Building('Brett Farm', 0, 5, 500);
 const farmID = "brettFarmLevel";
 const farmCostID = "brettFarmCost";
+const farmCPSID = "brettFarmCPS";
+const farmErrorMessage = 'farmErrorMessage';
 
 const gamblingHouse = new Building('Brett Gambling House', 0, 100, 6200);
 const gamblingID = "brettGamblingLevel";
 const gamblingCostID = "brettGamblingCost";
+const gamblingCPSID = "brettGamblingCPS";
+const gamblingErrorMessage = 'gamblingErrorMessage';
 
 const brettLab = new Building('Brett Labs', 0, 520, 50000);
 const labID = "brettLabLevel";
 const labCostID = "brettLabCost";
+const labCPSID = "brettLabCPS";
+const labErrorMessage = 'labErrorMessage';
 
 const brettRecursion = new Building('Brett Recursion', 0, 5300, 320320);
 const recursionID = "brettRecursionLevel";
 const recursionCostID = "brettRecursionCost";
+const recursionCPSID = "brettRecursionCPS";
+const recursionErrorMessage = 'recursionErrorMessage';
 
 const brettSingularity = new Building('Brett Singularity', 0, 620000, 1000000);
 const singularityID = "brettSingularityLevel";
 const singularityCostID = "brettSingularityCost";
+const singularityCPSID = "brettSingularityCPS";
+const singularityErrorMessage = 'singularityErrorMessage';
 
 
 let intervalID;
@@ -80,7 +92,7 @@ function produceCookies(){
 }
 
 
-function upgradeBuilding(building, upgrade, upgradeId){
+function upgradeBuilding(building, upgrade, upgradeId, cpsID){
 
     console.log(upgrade.bought)
 
@@ -92,7 +104,9 @@ function upgradeBuilding(building, upgrade, upgradeId){
     }else if (cookies >= upgrade.cost){
         building.cps *= 2;
         cookies -= upgrade.cost;
-        document.getElementById('counter').innerHTML = cookies;
+
+        document.getElementById(cpsID).innerHTML = numberFormatter(building.cps);
+        document.getElementById('counter').innerHTML = numberFormatter(cookies);
         console.log(building.name + 'upgraded');
         //Set the flag to false
         upgrade.bought = true
@@ -109,7 +123,7 @@ function upgradeBuilding(building, upgrade, upgradeId){
 
 
 
-function buyBuilding(building, id, costID){
+function buyBuilding(building, id, costID, errorID){
 
 
     if (cookies >= building.cost){ //Buy the Building Successfully
@@ -136,16 +150,28 @@ function buyBuilding(building, id, costID){
 
     } else{ //Not enough cookies
         console.log("You do not have enough cookies to make this purchase")
+
+        document.getElementById(errorID).innerHTML = "Not enought cookies to make this purchase";  
+        document.getElementById(errorID).style.display = "flex";      
+        document.getElementById(errorID).style.color = "red";      
+
+        setTimeout(handleErrors, 3000, errorID);
     }
     
 }
 
 
-function sellBuilding(building, id, costID){
+function sellBuilding(building, id, costID, errorID){
 
     //If building is level 0 or lower don't update the level again and end the interval (timer)
     if (building.level <= 0){
         console.log(building.name +  ' already all sold')
+
+        //Handles error message if building is already sold
+        document.getElementById(errorID).innerHTML = "Building Already Sold";  
+        document.getElementById(errorID).style.display = "flex";      
+        document.getElementById(errorID).style.color = "red";      
+        setTimeout(handleErrors, 3000, errorID);
         
 
     }else{ //Sucessfully sell the building
@@ -162,6 +188,13 @@ function sellBuilding(building, id, costID){
         
         
     }  
+}
+
+//Makes the error messages disappear 
+function handleErrors(elementID){
+    document.getElementById(elementID).style.display = "none";
+    
+
 }
 
 
