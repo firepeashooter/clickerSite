@@ -2,7 +2,7 @@
 let cookies = 0;
 let clickMultiplier = 1;
 let clickUpgrade = true;
-let clicks = 0
+let clicks = 0;
 
 
 function cookieUp(clickMultiplier){

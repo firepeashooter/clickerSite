@@ -61,7 +61,7 @@
         </div>
 
         <div class="stat--container">
-          <h3>BuildingsBought: </h3> 
+          <h3>Buildings Bought: </h3> 
           <h3 id="buildingsBought" style="padding-left: 5%;">0</h3>
         </div>
 
@@ -304,12 +304,17 @@
           </div>
           
           <div class="building--button--container">
-            <button onclick="buyBuilding(brettFarm, farmID, farmCostID)">Buy</button>
-            <button onclick="sellBuilding(brettFarm, farmID, farmCostID)">Sell</button>
+            <button onclick="buyBuilding(brettFarm, farmID, farmCostID, farmErrorMessage)">Buy</button>
+            <button onclick="sellBuilding(brettFarm, farmID, farmCostID, farmErrorMessage)">Sell</button>
 
           </div>
            
         </div>
+
+        
+        <div class="builidng--error--message">
+            <span id="farmErrorMessage" style="display: none;"></span>
+        </div> 
 
 
         <div class="building" id="building3">
@@ -342,12 +347,17 @@
           </div>
           
           <div class="building--button--container">
-            <button onclick="buyBuilding(gamblingHouse, gamblingID, gamblingCostID)">Buy</button>
-            <button onclick="sellBuilding(gamblingHouse, gamblingID, gamblingCostID)">Sell</button>
+            <button onclick="buyBuilding(gamblingHouse, gamblingID, gamblingCostID, gamblingErrorMessage)">Buy</button>
+            <button onclick="sellBuilding(gamblingHouse, gamblingID, gamblingCostID, gamblingErrorMessage)">Sell</button>
 
           </div>
            
         </div>
+
+        
+        <div class="builidng--error--message">
+            <span id="gamblingErrorMessage" style="display: none;"></span>
+        </div> 
 
 
         <div class="building" id="building4">
@@ -380,12 +390,17 @@
           </div>
           
           <div class="building--button--container">
-            <button onclick="buyBuilding(brettLab, labID, labCostID)">Buy</button>
-            <button onclick="sellBuilding(brettLab, labID, labCostID)">Sell</button>
+            <button onclick="buyBuilding(brettLab, labID, labCostID, labErrorMessage)">Buy</button>
+            <button onclick="sellBuilding(brettLab, labID, labCostID, labErrorMessage)">Sell</button>
 
           </div>
            
         </div>
+
+        
+        <div class="builidng--error--message">
+            <span id="labErrorMessage" style="display: none;"></span>
+        </div> 
 
 
         <div class="building" id="building5">
@@ -418,12 +433,17 @@
           </div>
           
           <div class="building--button--container">
-            <button onclick="buyBuilding(brettRecursion, recursionID, recursionCostID)">Buy</button>
-            <button onclick="sellBuilding(brettRecursion, recursionID, recursionCostID)">Sell</button>
+            <button onclick="buyBuilding(brettRecursion, recursionID, recursionCostID, recursionErrorMessage)">Buy</button>
+            <button onclick="sellBuilding(brettRecursion, recursionID, recursionCostID, recursionErrorMessage)">Sell</button>
 
           </div>
            
         </div>
+
+        
+        <div class="builidng--error--message">
+            <span id="recursionErrorMessage" style="display: none;"></span>
+        </div> 
 
 
         <div class="building" id="building6">
@@ -456,12 +476,17 @@
           </div>
           
           <div class="building--button--container">
-            <button onclick="buyBuilding(brettSingularity, singularityID, singularityCostID)">Buy</button>
-            <button onclick="sellBuilding(brettSingularity, singularityID, singularityCostID)">Sell</button>
+            <button onclick="buyBuilding(brettSingularity, singularityID, singularityCostID, singularityErrorMessage)">Buy</button>
+            <button onclick="sellBuilding(brettSingularity, singularityID, singularityCostID, singularityErrorMessage)">Sell</button>
 
           </div>
            
         </div>
+
+        
+        <div class="builidng--error--message">
+            <span id="singularityErrorMessage" style="display: none;"></span>
+        </div> 
 
 
 

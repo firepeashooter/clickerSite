@@ -51,26 +51,31 @@ const brettFarm = new Building('Brett Farm', 0, 5, 500);
 const farmID = "brettFarmLevel";
 const farmCostID = "brettFarmCost";
 const farmCPSID = "brettFarmCPS";
+const farmErrorMessage = 'farmErrorMessage';
 
 const gamblingHouse = new Building('Brett Gambling House', 0, 100, 6200);
 const gamblingID = "brettGamblingLevel";
 const gamblingCostID = "brettGamblingCost";
 const gamblingCPSID = "brettGamblingCPS";
+const gamblingErrorMessage = 'gamblingErrorMessage';
 
 const brettLab = new Building('Brett Labs', 0, 520, 50000);
 const labID = "brettLabLevel";
 const labCostID = "brettLabCost";
 const labCPSID = "brettLabCPS";
+const labErrorMessage = 'labErrorMessage';
 
 const brettRecursion = new Building('Brett Recursion', 0, 5300, 320320);
 const recursionID = "brettRecursionLevel";
 const recursionCostID = "brettRecursionCost";
 const recursionCPSID = "brettRecursionCPS";
+const recursionErrorMessage = 'recursionErrorMessage';
 
 const brettSingularity = new Building('Brett Singularity', 0, 620000, 1000000);
 const singularityID = "brettSingularityLevel";
 const singularityCostID = "brettSingularityCost";
 const singularityCPSID = "brettSingularityCPS";
+const singularityErrorMessage = 'singularityErrorMessage';
 
 
 let intervalID;
@@ -148,6 +153,8 @@ function buyBuilding(building, id, costID, errorID){
 
         document.getElementById(errorID).innerHTML = "Not enought cookies to make this purchase";  
         document.getElementById(errorID).style.display = "flex";      
+        document.getElementById(errorID).style.color = "red";      
+
         setTimeout(handleErrors, 3000, errorID);
     }
     
@@ -163,6 +170,7 @@ function sellBuilding(building, id, costID, errorID){
         //Handles error message if building is already sold
         document.getElementById(errorID).innerHTML = "Building Already Sold";  
         document.getElementById(errorID).style.display = "flex";      
+        document.getElementById(errorID).style.color = "red";      
         setTimeout(handleErrors, 3000, errorID);
         
 
